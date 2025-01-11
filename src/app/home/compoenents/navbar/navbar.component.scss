@@ -1,0 +1,31 @@
+.nav-line {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.li {
+  margin: 0 85px;
+  color: white;
+  font-size: 18px;
+  font-family: "Roboto", serif;
+  font-weight: 200;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: lightgray;
+  }
+}
+
+.dot {
+  color: white;
+  font-size: 4px;
+  font-family: "Roboto", serif;
+  font-weight: 500;
+  font-style: normal;
+}

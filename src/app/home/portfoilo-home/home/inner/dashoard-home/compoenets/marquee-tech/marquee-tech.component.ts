@@ -1,26 +1,16 @@
-import {Component, HostListener, inject} from '@angular/core';
-import {MatIcon} from "@angular/material/icon";
-import {Router, RouterLink} from "@angular/router";
-import {routes} from "../../../../../app.routes";
-import {MarqueeTechComponent} from "./compoenets/marquee-tech/marquee-tech.component";
+import {Component, HostListener} from '@angular/core';
 import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-dashoard-home',
+  selector: 'app-marquee-tech',
   standalone: true,
   imports: [
-    MatIcon,
-    RouterLink,
-    MarqueeTechComponent,
     NgIf
   ],
-  templateUrl: './dashoard-home.component.html',
-  styleUrl: './dashoard-home.component.scss'
+  templateUrl: './marquee-tech.component.html',
+  styleUrl: './marquee-tech.component.scss'
 })
-export class DashoardHomeComponent {
-
-  readonly router = inject(Router);
-
+export class MarqueeTechComponent {
   screenWidth: number = window.innerWidth;
 
   isExtraLargeScreen: boolean = this.screenWidth > 1366; // 1920px or larger
@@ -28,11 +18,7 @@ export class DashoardHomeComponent {
   isMediumScreen: boolean = this.screenWidth <= 1024 && this.screenWidth > 412; // Between 1024px and 412px
   isLowScreen: boolean = this.screenWidth <= 412; // 412px or smaller
 
-  moreBtn() {
-     this.router.navigateByUrl("//main/about").then();
-  }
-
-// Listen for window resize events
+  // Listen for window resize events
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.screenWidth = (event.target as Window).innerWidth;
@@ -44,5 +30,3 @@ export class DashoardHomeComponent {
     this.isLowScreen = this.screenWidth <= 412; // 412px or smaller
   }
 }
-
-

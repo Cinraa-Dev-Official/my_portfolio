@@ -1,2 +1,51 @@
-<h1 class="text-bg-primary p-3">Aaaaaa patiyooo...... kohmd ?  hodin innwd kari pkaya </h1>
-<router-outlet/>
+<!-- Large screen (1440px and above) -->
+<div *ngIf="isLargeScreen" class="topper-area">
+  <app-navbar></app-navbar>
+</div>
+<router-outlet *ngIf="isLargeScreen"></router-outlet>
+
+<!-- Medium screen (1024px and below) -->
+<div *ngIf="isMediumScreen" class="topper-area">
+  <app-navbar></app-navbar>
+</div>
+<router-outlet *ngIf="isMediumScreen"></router-outlet>
+<!-- Medium screen (1024px and below) -->
+
+<!-- extra screen (1920px and below) -->
+<div *ngIf="isExtraLargeScreen" class="topper-area">
+  <app-navbar></app-navbar>
+</div>
+<router-outlet *ngIf="isExtraLargeScreen"></router-outlet>
+<!-- Medium screen (1920px and below) -->
+
+<!-- extra screen (412px and below) -->
+<div *ngIf="isLowScreen" class="topper-home-area-lw">
+  <div class="text-grp">
+    <span class="text-1 text-capitalize font-weight-light">Hello,  I'm</span><br>
+    <span class="text-2 text-capitalize">Bruce Wayne</span><br><br>
+    <p class="text-3 text-capitalize font-weight-light">welcome to my site ! I have 7+ years of experience building high quality products and web applications. Well versed in Figma and
+      UI design last 2 years developing projects with ReactJs.
+    </p>
+  </div>
+  <div class="btn-grp">
+    <button
+      type="button"
+      class="btn"
+      [ngClass]="{'active-btn': selectedBtn === 'projects'}"
+      (click)="selectProject('projects')"
+    >
+      Projects
+    </button>
+    <button
+      type="button"
+      class="btn"
+      [ngClass]="{'active-btn': selectedBtn === 'about'}"
+      (click)="selectAbout('about')"
+    >
+      About
+    </button>
+  </div>
+
+</div>
+<router-outlet *ngIf="isLowScreen"></router-outlet>
+<!-- Medium screen (412px and below) -->

@@ -1,1 +1,30 @@
-<p>navbar works!</p>
+<div class="container" @navbar>
+  <ul class="nav-line">
+    <li
+      class="li"
+      routerLink="/main/home"
+      routerLinkActive="active-link"
+      [@activeLink]="isActive('/main/home') ? 'active' : 'inactive'"
+    >
+      Home
+    </li>
+    <li class="dot">.</li>
+    <li
+      class="li"
+      routerLink="/main/projects"
+      routerLinkActive="active-link"
+      [@activeLink]="isActive('/main/projects') ? 'active' : 'inactive'"
+    >
+      Projects
+    </li>
+    <li class="dot">.</li>
+    <li
+      class="li"
+      routerLink="/main/about"
+      routerLinkActive="active-link"
+      [@activeLink]="isActive('/main/about') ? 'active' : 'inactive'"
+    >
+      About
+    </li>
+  </ul>
+</div>
