@@ -1,20 +1,18 @@
-import {Component, HostListener, Inject, PLATFORM_ID} from '@angular/core';
-import {LangNavbarComponent} from "./components/lang-navbar/lang-navbar.component";
-import {Router, RouterOutlet} from "@angular/router";
+import {Component, HostListener, Inject, Input, PLATFORM_ID} from '@angular/core';
+import {Router} from "@angular/router";
 import {isPlatformBrowser, NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-box',
   standalone: true,
   imports: [
-    LangNavbarComponent,
-    RouterOutlet,
     NgIf
   ],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  templateUrl: './box.component.html',
+  styleUrl: './box.component.scss'
 })
-export class ProjectsComponent {
+export class BoxComponent {
+  @Input() title = "Title"
 
   screenWidth: number = 0;
 
@@ -46,5 +44,4 @@ export class ProjectsComponent {
     this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
     this.isLowScreen = this.screenWidth <= 500;
   }
-
 }

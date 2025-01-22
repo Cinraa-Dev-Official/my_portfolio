@@ -23,15 +23,16 @@ $txt-grp-height: 290px;
 
 .topper-home-area-lw {
   width: $max-width;
-  height: 380px;
+  height: 260px;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
-  background-image: url("/assets/background.jpg");
+  background-image: url("/assets/bg/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-bottom: 5px solid #ffffff;
   display: flex;
   flex-direction: column;
+  padding-bottom: 5px;
 
   .text-grp {
     width: $width;
@@ -74,7 +75,7 @@ $txt-grp-height: 290px;
 
     button {
       width: 150px;
-      height: 55px;
+      height: 50px;
       color: white;
       font-size: 18px;
       font-family: "Roboto", serif;
@@ -84,6 +85,7 @@ $txt-grp-height: 290px;
       align-items: center;
       background: none;
       border: 2px solid transparent;
+      margin-bottom: 10px;
 
       &.active-btn {
         border: 2px solid white;

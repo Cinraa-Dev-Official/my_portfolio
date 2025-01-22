@@ -1,9 +1,9 @@
-import {Component, HostListener, inject} from '@angular/core';
+import {Component, HostListener, Inject, inject, PLATFORM_ID} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 import {Router, RouterLink} from "@angular/router";
 import {routes} from "../../../../../app.routes";
 import {MarqueeTechComponent} from "./compoenets/marquee-tech/marquee-tech.component";
-import {NgIf} from "@angular/common";
+import {isPlatformBrowser, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-dashoard-home',
@@ -19,29 +19,38 @@ import {NgIf} from "@angular/common";
 })
 export class DashoardHomeComponent {
 
-  readonly router = inject(Router);
+  screenWidth: number = 0;
 
-  screenWidth: number = window.innerWidth;
+  isExtraLargeScreen: boolean = false;
+  isLargeScreen: boolean = false;
+  isMediumScreen: boolean = false;
+  isLowScreen: boolean = false;
 
-  isExtraLargeScreen: boolean = this.screenWidth > 1366; // 1920px or larger
-  isLargeScreen: boolean = this.screenWidth <= 1366 && this.screenWidth > 1024; // Between 1366px and 1024px
-  isMediumScreen: boolean = this.screenWidth <= 1024 && this.screenWidth > 412; // Between 1024px and 412px
-  isLowScreen: boolean = this.screenWidth <= 412; // 412px or smaller
-
-  moreBtn() {
-     this.router.navigateByUrl("//main/about").then();
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+              private router: Router
+  ) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = window.innerWidth;
+      this.updateScreenFlags();
+    }
   }
 
-// Listen for window resize events
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
-    this.screenWidth = (event.target as Window).innerWidth;
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = (event.target as Window).innerWidth;
+      this.updateScreenFlags();
+    }
+  }
 
-    // Update screen size flags
-    this.isExtraLargeScreen = this.screenWidth > 1366; // 1920px or larger
-    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024; // Between 1366px and 1024px
-    this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 412; // Between 1024px and 412px
-    this.isLowScreen = this.screenWidth <= 412; // 412px or smaller
+  private updateScreenFlags() {
+    this.isExtraLargeScreen = this.screenWidth > 1366;
+    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024;
+    this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
+    this.isLowScreen = this.screenWidth <= 500;
+  }
+  moreBtn() {
+    this.router.navigateByUrl("//main/about").then();
   }
 }
 
