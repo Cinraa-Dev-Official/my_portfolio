@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, HostListener, Inject, PLATFORM_ID} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
 import {MatButton, MatFabButton} from "@angular/material/button";
-import {NgForOf} from "@angular/common";
+import {isPlatformBrowser, NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-about',
@@ -10,13 +10,44 @@ import {NgForOf} from "@angular/common";
     MatIcon,
     MatFabButton,
     MatButton,
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
   email = "damjithfernando@gamil.com";
+  contact_no = +94750134966;
+  address = 'No 13 Walawwatta Mudukatuwa Marawila';
+  screenWidth: number = 0;
+
+  isExtraLargeScreen: boolean = false;
+  isLargeScreen: boolean = false;
+  isMediumScreen: boolean = false;
+  isLowScreen: boolean = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = window.innerWidth;
+      this.updateScreenFlags();
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.screenWidth = (event.target as Window).innerWidth;
+      this.updateScreenFlags();
+    }
+  }
+
+  private updateScreenFlags() {
+    this.isExtraLargeScreen = this.screenWidth > 1366;
+    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024;
+    this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
+    this.isLowScreen = this.screenWidth <= 500;
+  }
 
   experience = [
     {
@@ -49,7 +80,16 @@ export class AboutComponent {
     {
       name: 'Hasika Sandaruwan',
       position: 'Software Architect',
-      company: 'Seeker Cloud(PVT) Ltd. | Sri Lanka',
+      company: 'Seeker Cloud(PVT) Ltd.',
+      country: 'Sri Lanka',
+      contact: '+945723720439',
+      email: 'hasika@seekercloud.com'
+    },
+    {
+      name: 'Hasika Sandaruwan',
+      position: 'Software Architect',
+      company: 'Seeker Cloud(PVT) Ltd.',
+      country: 'Sri Lanka',
       contact: '+945723720439',
       email: 'hasika@seekercloud.com'
     }
