@@ -65,3 +65,10 @@
 </div>
 <!-- ------ max width 1920-------- -->
 
+<!-- ------ max width 412-------- -->
+<div *ngIf="isLowScreen" class="container topper-home-area-sm">
+  <app-lang-navbar *ngIf="isLowScreen"/>
+</div>
+<router-outlet *ngIf="isLowScreen"/>
+<!-- ------ max width 412-------- -->
+

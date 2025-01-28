@@ -1,9 +1,11 @@
 import {Component, HostListener, Inject, inject, PLATFORM_ID} from '@angular/core';
 import {MatIcon} from "@angular/material/icon";
-import {Router, RouterLink} from "@angular/router";
+import {Router, RouterLink, RouterOutlet} from "@angular/router";
 import {routes} from "../../../../../app.routes";
 import {MarqueeTechComponent} from "./compoenets/marquee-tech/marquee-tech.component";
 import {isPlatformBrowser, NgIf} from "@angular/common";
+import {AllComponent} from "../projects/inner/all/all.component";
+import {LangNavbarComponent} from "../projects/components/lang-navbar/lang-navbar.component";
 
 @Component({
   selector: 'app-dashoard-home',
@@ -12,7 +14,10 @@ import {isPlatformBrowser, NgIf} from "@angular/common";
     MatIcon,
     RouterLink,
     MarqueeTechComponent,
-    NgIf
+    NgIf,
+    AllComponent,
+    LangNavbarComponent,
+    RouterOutlet
   ],
   templateUrl: './dashoard-home.component.html',
   styleUrl: './dashoard-home.component.scss'

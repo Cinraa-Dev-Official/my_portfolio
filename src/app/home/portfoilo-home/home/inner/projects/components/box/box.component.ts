@@ -1,18 +1,20 @@
 import {Component, HostListener, Inject, Input, PLATFORM_ID} from '@angular/core';
 import {Router} from "@angular/router";
-import {isPlatformBrowser, NgIf} from "@angular/common";
+import {isPlatformBrowser, NgIf, NgStyle} from "@angular/common";
 
 @Component({
   selector: 'app-box',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    NgStyle
   ],
   templateUrl: './box.component.html',
   styleUrl: './box.component.scss'
 })
 export class BoxComponent {
   @Input() title = "Title"
+  @Input() bgImage = "/assets/bg/bg-2.jpg";
 
   screenWidth: number = 0;
 

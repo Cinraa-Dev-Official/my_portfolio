@@ -217,7 +217,8 @@
     <h2>Education</h2>
     <div class="education-item" *ngFor="let education of education">
       <h3>{{education.title}}</h3>
-      <p class="company">{{education.institution}} | {{education.duration}}</p>
+      <p class="company">{{education.institution}}</p>
+      <p class="company">{{education.duration}}</p>
       <p class="description">
         {{education.description}}
       </p>
@@ -239,22 +240,22 @@
   <div class="contact-details">
     <h2>Contact</h2>
     <div class="details">
-      <p class="email">
+      <p class="inner-info">
         <img width="30" height="30" src="https://img.icons8.com/ios/50/00000/new-post--v1.png" alt="new-post--v1"/>
         {{email}}
       </p>
-      <p class="phone">
+      <p class="inner-info">
         <img width="30" height="30" src="https://img.icons8.com/ios/50/00000/phone.png" alt="phone"/>
-        {{contact_no}}
+       {{contact_no}}
       </p>
-      <p class="address">
+      <div class="inner-info">
         <img
           width="30"
           height="30"
           src="https://img.icons8.com/parakeet-line/48/00000/order-delivered.png"
           alt="order-delivered"/>
-        {{address}}
-      </p>
+        <p>{{address}}</p>
+      </div>
       <div class="social">
         <a href="#">
           <img width="30" height="30" src="https://img.icons8.com/ios/50/00000/linkedin.png" alt="linkedin"/>
@@ -273,13 +274,13 @@
 
         <div class="button-area">
           <div class="cv-btn">
-            <button mat-flat-button color="primary" (click)="downloadFile('cv')">
+            <button mat-flat-button  (click)="downloadFile('cv')">
               <mat-icon>download</mat-icon>
               My CV
             </button>
           </div>
           <div class="cover-letter-btn">
-            <button mat-flat-button color="primary" (click)="downloadFile('cover-letter')">
+            <button mat-flat-button  (click)="downloadFile('cover-letter')">
               <mat-icon>download</mat-icon>
               Cover Letter
             </button>

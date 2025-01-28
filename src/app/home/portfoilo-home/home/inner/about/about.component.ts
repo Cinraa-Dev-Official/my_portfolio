@@ -65,13 +65,13 @@ export class AboutComponent {
     {
       title: 'Java Programming Master Course',
       institution: 'Evotech Educational Institute',
-      duration: 'September 2010 - May 2014',
+      duration: 'Sep 2010 - May 2014',
       description: 'Successfully Completed Java Programming language certificate master program'
     },
     {
       title: 'Java Programming Master Course',
       institution: 'Evotech Educational Institute',
-      duration: 'September 2010 - May 2014',
+      duration: 'Oct 2010 - Jun 2014',
       description: 'Successfully Completed Java Programming language certificate master program'
     }
   ]

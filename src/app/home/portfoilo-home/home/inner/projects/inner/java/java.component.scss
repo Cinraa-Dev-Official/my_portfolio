@@ -47,7 +47,7 @@ $title-block-height: 50px;
 // *******   max width 412 **************
 .bx-outer-sm {
   width: $max-width;
-  max-height: 170px;
+  max-height: 200px;
   display: grid;
   grid-template-columns: repeat(2, 1fr); // Set to always display 2 columns
   gap: 10px; // Add spacing between items
@@ -55,13 +55,13 @@ $title-block-height: 50px;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 10px;
+  padding-left: 20px;
   overflow-y: auto;
- // border: 1px solid red;
+ //border: 1px solid red;
 
   // Custom scrollbar styles
   &::-webkit-scrollbar {
-    width: 3px; // Width of the scrollbar
+    width: 0; // Width of the scrollbar
   }
 
   &::-webkit-scrollbar-track {

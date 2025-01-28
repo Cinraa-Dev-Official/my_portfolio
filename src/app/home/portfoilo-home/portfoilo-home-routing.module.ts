@@ -16,7 +16,12 @@ const routes: Routes = [
   {
     path: "", component: HomeComponent, children: [
       {path: "", redirectTo: "home", pathMatch: "full"},
-      {path: "home", component: DashoardHomeComponent},
+      {
+        path: "home", component: DashoardHomeComponent, children: [
+          {path: "", redirectTo: "all", pathMatch: "full"},
+          {path: "all", component: AllComponent},
+        ]
+      },
       {path: "about", component: AboutComponent},
       {
         path: "projects", component: ProjectsComponent, children: [

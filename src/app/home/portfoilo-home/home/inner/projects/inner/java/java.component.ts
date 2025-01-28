@@ -14,11 +14,11 @@ import {Router} from "@angular/router";
     NgIf
   ],
   templateUrl: './java.component.html',
-  styleUrls: ['./java.component.scss'] // Ensure this is "styleUrls", not "styleUrl"
+  styleUrls: ['./java.component.scss']
 })
 export class JavaComponent implements OnInit {
 
-  javaList:any[]=[]; // Declare as an array
+  javaList:any[]=[];
   screenWidth: number = 0;
 
   isExtraLargeScreen: boolean = false;
@@ -56,6 +56,7 @@ export class JavaComponent implements OnInit {
       {
         prjTitle: "Institute 1",
         gitHubLink:"http://github.com",
+        bgImg:"/assets/project/java/java.jpeg",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
           "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
           "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +
@@ -96,6 +97,7 @@ export class JavaComponent implements OnInit {
       {
         prjTitle: "Institute 2",
         gitHubLink:"http://github.com",
+        bgImg:"/assets/project/java/java.jpeg",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
           "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
           "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +
@@ -136,6 +138,7 @@ export class JavaComponent implements OnInit {
       {
         prjTitle: "Institute 3",
         gitHubLink:"http://github.com",
+        bgImg:"/assets/project/java/java.jpeg",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
           "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
           "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +
@@ -176,6 +179,7 @@ export class JavaComponent implements OnInit {
       {
         prjTitle: "Institute 4",
         gitHubLink:"http://github.com",
+        bgImg:"/assets/project/java/java.jpeg",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
           "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
           "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +
@@ -216,6 +220,7 @@ export class JavaComponent implements OnInit {
       {
         prjTitle: "Institute 5",
         gitHubLink:"http://github.com",
+        bgImg:"/assets/project/java/java.jpeg",
         desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
           "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
           "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +

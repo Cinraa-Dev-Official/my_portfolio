@@ -380,17 +380,21 @@
   }
 
 
-  // small display
+  // *************   small display *************************************
   .small-outer {
     width: 95%;
-    height: 650px;
+    height: 250px;
+    position: relative;
     overflow: scroll;
+    overflow-x: hidden;
     background-color: rgba(255, 255, 255, 0.71);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-left: 2.5%;
     padding: 10px 20px;
+    margin-top: 10px;
+    //border:1px solid red;
     border-radius: 20px;
 
     .profile-details {
@@ -504,6 +508,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      //border: 1px solid red;
 
       h2{
         font-size: 25px;
@@ -514,12 +519,22 @@
         flex-direction: column;
         align-items: flex-start;
         margin-left: 40px;
+       // border: 1px solid rgba(36, 36, 220, 0.85);
 
-        p {
+        .inner-info {
           margin-bottom: 10px;
+          //border: 1px solid #1aff00;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
 
           img{
             margin-right: 10px;
+            //border: 1px solid #740de3;
+          }
+          p{
+            margin-top: 10px;
+            //border: 1px solid #e30dd8;
           }
         }
       }
@@ -533,7 +548,7 @@
         a {
           margin-right: 10px;
           text-decoration: none;
-          color: #3777a4;
+          color: #0868ec;
         }
       }
     }
@@ -548,15 +563,22 @@
         margin-right: 10px;
         button {
           width: 150px;
+          background-color: black;
+          color: white;
+          border-radius: 18px;
         }
       }
 
       .cover-letter-btn{
         button {
           width: 150px;
+          background-color: black;
+          color: white;
+          border-radius: 18px;
         }
       }
     }
 
   }
 
+  // *************   small display *************************************

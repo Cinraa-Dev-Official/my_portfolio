@@ -7,6 +7,6 @@
 
 <!-- extra screen (412 and below) -->
 <div *ngIf="isLowScreen" class="bx-outer-sm"  >
-  <app-box *ngFor="let list of javaList" (click)="openPopupSM(list)" title="{{list.prjTitle}}"/>
+  <app-box *ngFor="let list of javaList" (click)="openPopupSM(list)" title="{{list.prjTitle}}" bgImage="{{list.bgImg}}"/>
 </div>
 <!-- extra screen (412 and above) -->
