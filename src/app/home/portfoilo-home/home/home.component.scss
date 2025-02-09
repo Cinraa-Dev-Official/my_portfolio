@@ -7,11 +7,12 @@ $bottom-height: 95px;
 // ------   max width 1440 ----------------------
 
 .topper-area {
-  width: $max-width;
+  width: 100%;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10PX;
 }
 
 // ------   max width 1440 ----------------------
@@ -23,7 +24,8 @@ $txt-grp-height: 290px;
 
 .topper-home-area-lw {
   width: $max-width;
-  height: 260px;
+  overflow-y: auto;
+  height: auto;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
   background-image: url("/assets/bg/background.jpg");
