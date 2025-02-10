@@ -1,4 +1,4 @@
-$max-width: 100%;
+$max-width: 98%;
 $bx-width: 220px;
 $bx-height: 270px;
 $title-block-height: 50px;
@@ -7,16 +7,14 @@ $title-block-height: 50px;
   .bx-outer {
     width: $max-width;
     max-height: 480px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($bx-width, 1fr));
-    gap: 2px;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px 20px 42px;
     //padding-right: 20px;
-    padding-left: 42px;
     overflow-y: auto;
+    overflow-x: hidden;
    // border: 1px solid red;
 
 
