@@ -47,7 +47,7 @@ export class HomeComponent {
 
   private updateScreenFlags() {
     this.isExtraLargeScreen = this.screenWidth > 1366;
-    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024;
+    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1100;
     this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
     this.isLowScreen = this.screenWidth <= 500;
   }

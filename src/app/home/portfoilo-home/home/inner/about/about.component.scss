@@ -1,13 +1,14 @@
 
   .outer {
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    overflow-x: hidden;
 
     .contact-side {
-      width: 40%;
+      width: 35%;
       height: auto;
 
       .profile-details {
@@ -34,7 +35,7 @@
       }
 
       .contact-details {
-        margin-left: 50px;
+        margin-left: 40px;
         margin-top: 40px;
 
         h2 {
@@ -100,6 +101,12 @@
       .edu-exc {
         max-height: 700px;
         overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        ::-webkit-scrollbar{
+          display: none;
+        }
 
         .experience-details {
           .experience-item {
@@ -198,7 +205,7 @@
     justify-content: space-around;
 
     .contact-side {
-      width: 40%;
+      width: 30%;
       height: auto;
 
       .profile-details {
@@ -278,7 +285,7 @@
     }
 
     .experience-side {
-      flex: 1;
+      width: 70%;
       height: auto;
 
       h2 {

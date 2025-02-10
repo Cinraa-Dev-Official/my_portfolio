@@ -108,6 +108,4 @@ export class AboutComponent {
     link.download = fileUrl.split('/').pop() || 'file';
     link.click();
   }
-
-
 }
