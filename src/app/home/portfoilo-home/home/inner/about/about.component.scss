@@ -1,4 +1,202 @@
 
+.outer-ex-lg {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow-x: hidden;
+  padding: 50px;
+
+  .contact-side {
+    width: 40%;
+    //height: 100vh;
+
+    .profile-details {
+      margin-left: 65px;
+
+      img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+      }
+
+      .name {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 50px;
+        color: #ffffff;
+      }
+
+      .national {
+        font-size: 40px;
+        color: rgba(255, 255, 255, 0.56);
+        letter-spacing: 5px;
+      }
+    }
+
+    .contact-details {
+      margin-left: 75px;
+      margin-top: 75px;
+
+      h2 {
+        font-size: 35px;
+        color: #ffffff;
+      }
+
+      p {
+        font-size: 25px;
+        color: rgba(255, 255, 255, 0.56);
+        margin-bottom: 25px;
+
+        img {
+          margin-right: 15px;
+        }
+      }
+
+      .social {
+        margin-top: 60px;
+
+        a {
+          margin-right: 18px;
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.56);
+          font-size: 15px;
+
+          img {
+            margin-right: 10px;
+          }
+
+          &:hover {
+            color: #3777a4;
+          }
+        }
+      }
+    }
+
+    .button-area {
+      width: 450px;
+      margin-left: 80px;
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+
+      button {
+        width: 220px;
+        font-size: 20px;
+        height: 60px;
+      }
+    }
+  }
+
+  .experience-side {
+    flex: 1;
+    height: auto;
+
+    h2 {
+      color: #ffffff;
+      font-size: 35px;
+      letter-spacing: 1px;
+    }
+
+    .edu-exc {
+      //max-height: 1200px;
+      //overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      ::-webkit-scrollbar{
+        display: none;
+      }
+
+      .experience-details {
+        .experience-item {
+          h3 {
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.56);
+          }
+
+          .company {
+            font-size: 20px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+          }
+
+          .description {
+            font-size: 20px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .education-details {
+        margin-top: 40px;
+
+        .education-item {
+          margin-bottom: 35px;
+
+          h3 {
+            font-size: 30px;
+            color: rgba(255, 255, 255, 0.56);
+            margin-bottom: 0;
+          }
+
+          .company {
+            font-size: 20px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+          }
+
+          .description {
+            font-size: 20px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 15px;
+          }
+        }
+
+      }
+
+      .reference {
+        margin-top: 55px;
+
+        .reference-item {
+          h3 {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.56);
+            margin-bottom: 0;
+          }
+
+          .company {
+            font-size: 18px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 10px;
+            letter-spacing: 1.5px;
+          }
+
+          .contact {
+            font-size: 18px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 5px;
+          }
+
+          .email {
+            font-size: 18px;
+            color: rgba(197, 197, 197, 0.56);
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
   .outer {
     width: auto;
     height: auto;

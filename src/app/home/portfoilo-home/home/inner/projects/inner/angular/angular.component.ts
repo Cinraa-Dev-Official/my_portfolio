@@ -213,57 +213,7 @@ export class AngularComponent implements OnInit{
           },
 
         ]
-      },
-      // project 5 ----------------------------------
-      {
-        prjTitle: "Institute 5",
-        gitHubLink:"http://github.com",
-        bgImg:"/assets/project/angular/angular.png",
-        desc:"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat\n" +
-          "      harum ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem\n" +
-          "      ipsum dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum\n" +
-          "      ipsum libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae. Lorem ipsum\n" +
-          "      dolor sit amet, consectetur adipisicing elit. A ad beatae commodi consequatur corporis dolor fugiat harum ipsum\n" +
-          "      libero numquam praesentium quasi quo, reiciendis, repudiandae sint suscipit totam vel, vitae.",
-
-        tech: [
-          // technology icon 1 **
-          {
-            src:"./assets/tech/Angular.png",
-            techName:"Angular"
-          },
-          // technology icon 2 **
-          {
-            src:"./assets/tech/java-2.png",
-            techName:"Java"
-          },
-          // technology icon 3 **
-          {
-            src:"./assets/tech/spring-boot.png",
-            techName:"Spring-boot"
-          },
-          // technology icon 4 **
-          {
-            src:"./assets/tech/bootstrap.png",
-            techName:"Bootstrap"
-          },
-          // technology icon 5 **
-          {
-            src:"./assets/tech/Rust.png",
-            techName:"Rust"
-          },
-          // technology icon 6 **
-          {
-            src:"./assets/tech/sass.png",
-            techName:"Rust"
-          },
-          // technology icon 6 **
-          {
-            src:"./assets/tech/Docker.png",
-            techName:"Rust"
-          },
-        ]
-      },
+      }
     ];
   }
 

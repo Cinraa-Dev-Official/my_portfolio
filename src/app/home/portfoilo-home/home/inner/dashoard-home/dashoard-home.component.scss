@@ -104,6 +104,7 @@ $bottom-height:80px;
   .bottom-grp {
     width: $width;
     height: $bottom-height;
+    border: 1px solid red;
   }
 }
 // ------   max width 1440 ----------------------
@@ -228,8 +229,8 @@ $bottom-height-lg:130px;
 $half-width-r-lg:110%;
 
 // ------   max width 1920 ----------------------
-.outer-home-lg{
-  width: $max-width;
+.outer-home-ex-lg{
+  width: 100vw;
   height: $max-height-lg;
   display: flex;
   flex-direction: column;
@@ -261,7 +262,7 @@ $half-width-r-lg:110%;
     .grp-r-lg {
       width: $half-width-r-lg;
       height: $height;
-      padding-top: 60px;
+      padding-top: 200px;
       animation: scrollUp 1s ease-out;
 
       .text-1 {
@@ -283,9 +284,10 @@ $half-width-r-lg:110%;
 
       .text-3 {
         color: white;
-        font-size: 22px;
+        font-size: 30px;
         font-family: "Roboto", serif;
         font-weight: 90;
+        line-height: 1.2;
         text-align: left;
         width: 90%;
 
@@ -326,12 +328,11 @@ $half-width-r-lg:110%;
   }
 
   .bottom-grp-lg {
-    width: $width;
+    width: 100vw;
     height: $bottom-height-lg;
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 }
 // ------   max width 1920 ----------------------
