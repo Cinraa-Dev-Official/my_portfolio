@@ -13,3 +13,8 @@
 <!--responsive width size => 412px-->
 <!--responsive width size => 1024px-->
 <!--responsive width size => 1920px-->
+<div *ngIf="isExtraLargeScreen" class="topper-prj-area-ex-lg">
+    <app-lang-navbar *ngIf="isExtraLargeScreen"/>
+</div>
+<router-outlet *ngIf="isExtraLargeScreen"/>
+

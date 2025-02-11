@@ -2,13 +2,16 @@ $max-width: 100%;
 $bx-width: 220px;
 $bx-sm-width: 140px;
 $bx-sm-height: 140px;
+$bx-lg-width: 575px;
+$bx-lg-height: 450px;
 $bx-height: 270px;
 $title-block-height: 50px;
+$title-block-lg-height: 75px;
 
 // ********** 1440, 1920 1024 ************************************
 .box-bx {
-  width: $bx-width;
-  height: $bx-height;
+  width: $bx-lg-width;
+  height: $bx-lg-height;
   border: 1.5px solid #ffffff;
   display: flex;
   flex-direction: column;
@@ -20,6 +23,7 @@ $title-block-height: 50px;
   background-position: center;
   border-radius: 25px;
   margin-bottom: 10px;
+  margin-left: 15px;
   transition: transform 1s ease, color 0.3s ease;
 
   &:hover {
@@ -62,6 +66,64 @@ $title-block-height: 50px;
   }
 }
 // ********** 1440, 1920 1024 ************************************
+
+// ********** 1920 ************************************
+.box-bx-ex-lg {
+  width: $bx-lg-width;
+  height: $bx-lg-height;
+  border: 1.5px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url("/assets/project/java/java.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  margin-bottom: 10px;
+  transition: transform 1s ease, color 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+    h2 {
+      color: white;
+      transition: color 0.5s ease;
+    }
+
+    .title-bx {
+      opacity: 0.5;
+      transition: color 1s ease;
+    }
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    color: transparent;
+  }
+
+  .title-bx {
+    color: #000000;
+    background-color: white;
+    font-size: 30px;
+    width: $max-width;
+    height: $title-block-lg-height;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    opacity: 0.75;
+  }
+}
+// ********** 1920 ************************************
 
 //********  412px ************************************
 .box-bx-sm {

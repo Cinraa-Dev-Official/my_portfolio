@@ -1,30 +1,62 @@
-<div class="container" @navbar>
-  <ul class="nav-line">
-    <li
-      class="li"
-      routerLink="/main/home"
-      routerLinkActive="active-link"
-      [@activeLink]="isActive('/main/home') ? 'active' : 'inactive'"
-    >
-      Home
-    </li>
-    <li class="dot">.</li>
-    <li
-      class="li"
-      routerLink="/main/projects"
-      routerLinkActive="active-link"
-      [@activeLink]="isActive('/main/projects/all') ? 'active' : 'inactive'"
-    >
-      Projects
-    </li>
-    <li class="dot">.</li>
-    <li
-      class="li"
-      routerLink="/main/about"
-      routerLinkActive="active-link"
-      [@activeLink]="isActive('/main/about') ? 'active' : 'inactive'"
-    >
-      About
-    </li>
-  </ul>
+<div *ngIf="isLargeScreen" class="container nav-line" @navbar>
+    <ul class="nav-line">
+        <li
+                class="li"
+                routerLink="/main/home"
+                [class.active]="isActive('/main/home')"
+                [@activeLink]="isActive('/main/home') ? 'active' : 'inactive'"
+        >
+            Home
+        </li>
+        <li class="dot">•</li>
+        <li
+                class="li"
+                routerLink="/main/projects"
+                [class.active]="isActive('/main/projects')"
+                [@activeLink]="isActive('/main/projects') ? 'active' : 'inactive'"
+        >
+            Projects
+        </li>
+        <li class="dot">•</li>
+        <li
+                class="li"
+                routerLink="/main/about"
+                [class.active]="isActive('/main/about')"
+                [@activeLink]="isActive('/main/about') ? 'active' : 'inactive'"
+        >
+            About
+        </li>
+    </ul>
+</div>
+
+<!-- Extra Large Screen Layout -->
+<div *ngIf="isExtraLargeScreen" class="container nav-line-ex-lg" @navbar>
+    <ul class="nav-line">
+        <li
+                class="li"
+                routerLink="/main/home"
+                [class.active]="isActive('/main/home')"
+                [@activeLink]="isActive('/main/home') ? 'active' : 'inactive'"
+        >
+            Home
+        </li>
+        <li class="dot">•</li>
+        <li
+                class="li"
+                routerLink="/main/projects"
+                [class.active]="isActive('/main/projects')"
+                [@activeLink]="isActive('/main/projects') ? 'active' : 'inactive'"
+        >
+            Projects
+        </li>
+        <li class="dot">•</li>
+        <li
+                class="li"
+                routerLink="/main/about"
+                [class.active]="isActive('/main/about')"
+                [@activeLink]="isActive('/main/about') ? 'active' : 'inactive'"
+        >
+            About
+        </li>
+    </ul>
 </div>
