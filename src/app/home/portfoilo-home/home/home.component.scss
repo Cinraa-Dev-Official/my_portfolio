@@ -25,7 +25,7 @@ $txt-grp-height: 140px;
 
 .topper-home-area-lw {
   width: $max-width;
-  overflow-y: auto;
+  overflow-y: hidden;
   height: auto;
   border-bottom-right-radius: 50px;
   border-bottom-left-radius: 50px;
@@ -36,6 +36,26 @@ $txt-grp-height: 140px;
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
+
+  &::-webkit-scrollbar {
+    width: 0; // Width of the scrollbar
+  }
+
+  -ms-overflow-style: none;  // Hide scrollbar in IE and Edge
+  scrollbar-width: none;      // Hide scrollbar in Firefox
+
+  &::-webkit-scrollbar {
+    display: none;  // Hide scrollbar in Chrome, Safari, Edge
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
 
   .text-grp {
     width: $width;

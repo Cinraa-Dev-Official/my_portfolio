@@ -87,7 +87,7 @@ $title-block-height: 50px;
 // *******   max width 412 **************
 .bx-outer-sm {
   width: $max-width;
-  max-height: 264px;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr); // Set to always display 2 columns
   gap: 10px; // Add spacing between items
