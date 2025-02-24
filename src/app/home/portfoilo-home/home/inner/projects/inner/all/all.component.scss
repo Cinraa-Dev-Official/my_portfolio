@@ -119,6 +119,9 @@ $bx-width: 200px; // Set a box width that ensures proper column alignment
   padding-bottom: 20px;
   padding-left: 20px;
   overflow-y: auto;
+  position: sticky;
+  z-index: 0;
+  top: 250px !important;
   //border: 1px solid red;
 
   // Custom scrollbar styles

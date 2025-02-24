@@ -27,8 +27,8 @@ $txt-grp-height: 140px;
   width: $max-width;
   overflow-y: hidden;
   height: auto;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
   background-image: url("/assets/bg/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,6 +36,9 @@ $txt-grp-height: 140px;
   display: flex;
   flex-direction: column;
   padding-bottom: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 
   &::-webkit-scrollbar {
     width: 0; // Width of the scrollbar
