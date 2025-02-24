@@ -339,12 +339,16 @@ $half-width-r-lg:110%;
 // *******   max width 412 **************
 .topper-home-area-sm{
   width: $max-width;
-  height: 50px;
+  height: 75px;
   margin: 0;
   display: flex;
   align-items: center;
   overflow-x: auto;
   overflow-y: hidden;
+  background-color: #000000;
+  position: sticky;
+  top: 210px;
+  z-index: 1;
 
   /* Hide scrollbar */
   scrollbar-width: none; /* Firefox */
