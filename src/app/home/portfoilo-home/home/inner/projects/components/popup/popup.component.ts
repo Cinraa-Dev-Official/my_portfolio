@@ -53,8 +53,8 @@ export class PopupComponent implements OnInit {
   }
 
   private updateScreenFlags() {
-    this.isExtraLargeScreen = this.screenWidth > 1366;
-    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024;
+    this.isExtraLargeScreen = this.screenWidth > 1440;
+    this.isLargeScreen = this.screenWidth <= 1440 && this.screenWidth > 1024;
     this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
     this.isLowScreen = this.screenWidth <= 500;
   }

@@ -23,9 +23,7 @@ export class BoxComponent {
   isMediumScreen: boolean = false;
   isLowScreen: boolean = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,
-              private router: Router
-  ) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     if (isPlatformBrowser(this.platformId)) {
       this.screenWidth = window.innerWidth;
       this.updateScreenFlags();
@@ -41,8 +39,8 @@ export class BoxComponent {
   }
 
   private updateScreenFlags() {
-    this.isExtraLargeScreen = this.screenWidth > 1366;
-    this.isLargeScreen = this.screenWidth <= 1366 && this.screenWidth > 1024;
+    this.isExtraLargeScreen = this.screenWidth > 1440;
+    this.isLargeScreen = this.screenWidth <= 1440 && this.screenWidth > 1024;
     this.isMediumScreen = this.screenWidth <= 1024 && this.screenWidth > 500;
     this.isLowScreen = this.screenWidth <= 500;
   }

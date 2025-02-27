@@ -8,6 +8,12 @@ $bottom-height: 95px;
 .topper-prj-area{
   width: $max-width;
   height: 45px;
+
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+.topper-prj-area::-webkit-scrollbar {
+  display: none;
 }
 // *******   max width 1440 **************
 
